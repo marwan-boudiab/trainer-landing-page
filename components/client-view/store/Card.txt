@@ -1,0 +1,54 @@
+// import React from 'react';
+// import Image from 'next/image';
+// import AnimatedButton from '../ui/button/AnimatedButton';
+
+// interface CardProps {
+//   imageSrc: string;
+//   title: string;
+//   initialPrice: number;
+//   salePercentage: number;
+//   inStock: number;
+//   /* onMoreDetails: (title: string) => void; */ onMoreDetails: () => void;
+// }
+
+// const Card: React.FC<CardProps> = ({ imageSrc, title, initialPrice, salePercentage, inStock, onMoreDetails }) => {
+//   const calculateSalePrice = (initialPrice: number, salePercentage: number) => initialPrice - (initialPrice * salePercentage) / 100;
+
+//   return (
+//     // hover:scale-110
+//     <div className="mt-8 w-52 transform cursor-pointer overflow-hidden rounded-[30px] bg-primary-200 duration-300">
+//       <Image width={500} height={500} className="h-52 w-full rounded-[30px] object-cover object-center p-1" src={imageSrc} alt="Product Image" />
+//       <div className="p-4">
+//         <h2 className="mb-2 text-lg font-medium text-gray-900 dark:text-white">{title}</h2>
+//         <div className="mt-4 flex items-center">
+//           <p className="mr-2 text-lg font-semibold text-gray-900 dark:text-white">${calculateSalePrice(initialPrice, salePercentage)}</p>
+//           {salePercentage > 0 && (
+//             <>
+//               <p className="text-lg font-medium text-gray-500 line-through dark:text-gray-300">${initialPrice.toFixed(2)}</p>
+//               <p className="bg-tertiary absolute left-4 top-4 ml-auto rounded-xl bg-accent px-1 py-[2px] text-lg font-medium text-white">{salePercentage}%</p>
+//             </>
+//           )}
+//         </div>
+//         <p className="mt-2 text-sm font-medium uppercase text-gray-400">In Stock: {inStock}</p>
+//         {/* <FaPlusCircle className="absolute bottom-4 right-4 ml-auto size-6 text-gray-200 hover:text-white" /> */}
+//         <ScrollLink
+//           to="contact"
+//           smooth={true}
+//           duration={500}
+//           className="block"
+//           // onClick={() => onMoreDetails(title)}
+//           onClick={onMoreDetails}
+//         >
+//           <AnimatedButton text="Add to Order" containerStyles="px-4 py-2 mt-4" />
+//         </ScrollLink>
+//         {/* <AnimatedButton
+//           text="More Details"
+//           containerStyles="px-4 py-2 mt-4"
+//           onClick={() => onMoreDetails(title)}
+//         /> */}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Card;

@@ -1,0 +1,68 @@
+// import React from 'react';
+// import Card from './Card';
+// import { fadeIn } from '@/lib/variants';
+// import { motion } from 'framer-motion';
+// import { useSelectedEquipment } from '@/context/useEquipmentsContext';
+
+// interface EquipmentsProps {
+//   equipments: {
+//     id: number;
+//     imageSrc: string;
+//     title: string;
+//     price: number;
+//     sale: number;
+//     inStock: number;
+//   }[];
+//   // onSelectTitle: (title: string) => void;
+//   // onSelectEquipment: (equipment: { id: number; title: string }) => void;
+// }
+
+// const Equipments: React.FC<EquipmentsProps> = ({
+//   equipments,
+//   // onSelectTitle,
+//   // onSelectEquipment
+// }) => {
+//   const { addEquipment } = useSelectedEquipment();
+//   return (
+//     <>
+//       <motion.h2
+//         variants={fadeIn('up', 0.4)}
+//         initial="hidden"
+//         whileInView={'show'}
+//         viewport={{ once: true, amount: 0.2 }}
+//         className="h2 mb-5 mt-10 text-center"
+//       >
+//         Shop Calasthenics Equipments
+//       </motion.h2>
+//       <motion.p variants={fadeIn('up', 0.6)} initial="hidden" whileInView={'show'} viewport={{ once: true, amount: 0.2 }} className="text-primary">
+//         Welcome to our store dedicated to calisthenics enthusiasts! Here, you'll find a wide range of high-quality calisthenics equipment to help you achieve
+//         your fitness goals. Whether you're a beginner or an advanced practitioner, we have everything you need to set up your home gym or take your outdoor
+//         workouts to the next level. From pull-up bars and parallel bars to resistance bands and gymnastic rings, we've curated the best selection of products to
+//         support your calisthenics journey. Browse our store and start building your strength, flexibility, and endurance today!
+//       </motion.p>
+//       <motion.div
+//         variants={fadeIn('up', 0.6)}
+//         initial="hidden"
+//         whileInView={'show'}
+//         viewport={{ once: true, amount: 0.2 }}
+//         className="flex flex-wrap justify-center gap-6"
+//       >
+//         {equipments.map(equipment => (
+//           <Card
+//             key={equipment.id}
+//             imageSrc={equipment.imageSrc}
+//             title={equipment.title}
+//             initialPrice={equipment.price}
+//             salePercentage={equipment.sale}
+//             inStock={equipment.inStock}
+//             // onMoreDetails={onSelectTitle}
+//             // onMoreDetails={() => onSelectEquipment({ id: equipment.id, title: equipment.title })}
+//             onMoreDetails={() => addEquipment({ id: equipment.id, title: equipment.title })}
+//           />
+//         ))}
+//       </motion.div>
+//     </>
+//   );
+// };
+
+// export default Equipments;

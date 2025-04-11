@@ -1,0 +1,33 @@
+// 'use client';
+
+// import Equipments from '@/components/client-view/store/Equipments';
+// import Contact from '@/components/client-view/contact/whatsapp';
+// import { SelectedEquipmentProvider } from '@/context/useEquipmentsContext';
+// import { useState } from 'react';
+
+// const equipments = [
+//   { id: 1, imageSrc: '/assets/img/equipment/parallettes.jpg', title: 'Parallettes', price: 50, sale: 10, inStock: 5 },
+//   { id: 2, imageSrc: '/assets/img/equipment/rings.jpg', title: 'Gymnastics Rings', price: 40, sale: 0, inStock: 2 },
+// ];
+
+// const page = () => {
+//   // const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
+
+//   const [selectedEquipment, setSelectedEquipment] = useState<{ id: number; title: string }[]>([]);
+
+//   const handleSelectEquipment = (equipment: { id: number; title: string }) => {
+//     setSelectedEquipment(prevSelected => [...prevSelected, equipment]);
+//   };
+
+//   return (
+//     <SelectedEquipmentProvider>
+//       <div className="container mx-auto py-20 lg:pb-24 lg:pt-20">
+//         <Equipments equipments={equipments} />
+//         {/* onSelectTitle={setSelectedTitle}  */}
+//         <Contact />
+//         {/* selectedTitle={selectedTitle} */}
+//       </div>
+//     </SelectedEquipmentProvider>
+//   );
+// };
+// export default page;
