@@ -3,10 +3,10 @@
 A fully responsive landing page for a Calisthenics Trainer, featuring a comprehensive admin panel for managing all website content dynamically with a live preview pane for immediate feedback on changes.
 
 <div align="center">
-  <a href="https://youtu.be/2LHK7CJa4TI">
-    <img src="https://img.youtube.com/vi/2LHK7CJa4TI/maxresdefault.jpg" alt="Blaze Demo" width="600" style="border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+  <a href="https://www.marwan-boudiab.com/projects/blaze-calisthenics#demo">
+    <img src="https://crrwymojtb.ufs.sh/f/0ge4q9E4PJeZIsDvv0OZ8Xl0zfouBViqs5UPYatnhkv74p2j" alt="Blaze Calisthenics Demo" width="600" style="border-radius: 12px;">
     <br>
-    <img width="96" height="96" src="https://img.icons8.com/color/96/youtube-play.png" alt="youtube-play"/>
+    <p><strong>▶️ Click to watch project demo</strong></p>
   </a>
 </div>
 
