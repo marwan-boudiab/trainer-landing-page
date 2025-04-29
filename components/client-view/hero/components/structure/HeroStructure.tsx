@@ -3,26 +3,38 @@ import Motion from '@/components/client-view/motion/MotionComp';
 import Socials from '@/components/client-view/socials/Socials';
 import AnimatedButton from '@/components/client-view/ui/button/AnimatedButton';
 import ScrollLink from '@/components/client-view/navigation/link/ScrollLink';
+import { useState } from 'react';
 
 const HeroStructure = ({ subtitle, title, description, img }: HeroStructureProps) => {
-  //   console.log('HeroStructure Rendered on client');
+  const [imageLoading, setImageLoading] = useState(true);
+  
   return (
     <Motion as="section" delay={0.1} className="relative pt-[5rem] md:py-[10rem]" id="home">
       <div className="absolute left-0 top-0 -z-10 h-full w-full">
         {/* overlay */}
         <div className="absolute top-0 z-10 h-full w-full bg-black/40"></div>
-        <CldImage
-          src={img}
-          alt="Hero image"
-          sizes={`(max-width: 640px) 640px,(max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px`}
-          className="object-cover"
-          fill
-          crop="fill"
-          gravity="auto"
-          quality="auto"
-          format="auto"
-        />
+        
+        {/* Skeleton loader */}
+        {imageLoading && (
+          <div className="absolute inset-0 z-5 animate-pulse bg-primary-200"></div>
+        )}
+        
+        <div style={{ opacity: imageLoading ? 0 : 1, transition: 'opacity 0.3s ease' }}>
+          <CldImage
+            src={img}
+            alt="Hero image"
+            sizes={`(max-width: 640px) 640px,(max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px`}
+            className="object-cover"
+            fill
+            crop="fill"
+            gravity="auto"
+            quality="auto"
+            format="auto"
+            onLoad={() => setImageLoading(false)}
+          />
+        </div>
       </div>
+      
       <div className="container mx-auto h-full">
         <div className="flex flex-col items-center justify-between xl:flex-row">
           {/* text */}
